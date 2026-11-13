@@ -1,21 +1,25 @@
-import NavbarHero from "@/components/NavbarHero";
-import About from "@/components/About";
-import Dishes from "@/components/Dishes";
-import Menu from "@/components/Menu";
-import Order from "@/components/Order";
-import Testimonials from "@/components/Testimonials";
-import Gallery from "@/components/Gallery";
-import Location from "@/components/Location";
-import Footer from "@/components/Footer";
+import Header from "@/components/sections/Header";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import SignatureDishes from "@/components/sections/SignatureDishes";
+import Menu from "@/components/sections/Menu";
+import Reservation from "@/components/sections/Reservation";
+import Testimonials from "@/components/sections/Testimonials";
+import Gallery from "@/components/sections/Gallery";
+import Location from "@/components/sections/Location";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
     <>
-      <NavbarHero />
+      <div id="Home" className="navbar-hero">
+        <Header />
+        <Hero />
+      </div>
       <About />
-      <Dishes />
+      <SignatureDishes />
       <Menu />
-      <Order />
+      <Reservation />
       <Testimonials />
       <Gallery />
       <Location />
