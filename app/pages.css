@@ -1,0 +1,766 @@
+/*
+ * Styles for the inner pages (About, Contact, Blog, legal) and the colour switcher.
+ * Everything uses the Webflow theme variables (--base-color--base, --primary-color--p-100, ...)
+ * so these pages match the homepage and follow the colour switcher.
+ */
+
+.eo-page {
+  background-color: var(--base-color--base);
+  color: var(--neutral-color--n-100);
+  min-height: 100vh;
+}
+
+.eo-page main {
+  font-family: var(--_typography---font-family--font-bodytext);
+}
+
+/* On the homepage the header fades in with the hero animation. Inner pages
+   have no hero animation, so keep the header visible (overrides Webflow's
+   inline opacity: 0). */
+.eo-page-header .navbar-section {
+  opacity: 1 !important;
+}
+
+.eo-page main a {
+  color: inherit;
+}
+
+.eo-container {
+  max-width: var(--_sizes---container--max-width);
+  margin: 0 auto;
+}
+
+.eo-section {
+  padding: 80px var(--_sizes---section--padding-section);
+}
+
+.eo-section.tight {
+  padding-top: 0;
+}
+
+/* ---------- Hero ---------- */
+
+.eo-hero {
+  padding: 60px var(--_sizes---section--padding-section) 80px;
+}
+
+.eo-tag {
+  display: inline-block;
+  background-color: var(--primary-color--p-100);
+  color: var(--neutral-color--n-100);
+  font-family: var(--_typography---font-family--font-bodytext);
+  font-style: italic;
+  font-size: var(--_typography---bodytext--b2);
+  line-height: 1.2;
+  padding: 6px 16px;
+  transform: rotate(-3deg);
+}
+
+.eo-hero-title {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: clamp(64px, 11vw, 180px);
+  line-height: 0.9;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 24px 0 0;
+  color: var(--neutral-color--n-100);
+}
+
+.eo-hero-intro {
+  font-size: var(--_typography---bodytext--b1);
+  line-height: 1.35;
+  max-width: 760px;
+  margin: 32px 0 0;
+  opacity: 0.9;
+}
+
+.eo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 28px;
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+/* ---------- Headings and text ---------- */
+
+.eo-h2 {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: clamp(44px, 6vw, var(--_typography---heading--h2));
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.eo-h3 {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---heading--h5);
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.eo-text {
+  font-size: var(--_typography---bodytext--b2);
+  line-height: 1.5;
+  margin: 0 0 16px;
+  opacity: 0.92;
+}
+
+/* ---------- Layout blocks ---------- */
+
+.eo-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.eo-split.reverse > :first-child {
+  order: 2;
+}
+
+.eo-image {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  max-height: 640px;
+  object-fit: cover;
+  display: block;
+}
+
+.eo-wide-image {
+  width: 100%;
+  height: clamp(280px, 50vw, 620px);
+  object-fit: cover;
+  display: block;
+}
+
+.eo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.eo-card {
+  background-color: var(--primary-color--p-100);
+  padding: 36px 32px;
+}
+
+.eo-card-number {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: 72px;
+  line-height: 1;
+  opacity: 0.35;
+  margin-bottom: 16px;
+}
+
+.eo-quote {
+  border-left: 6px solid var(--primary-color--p-100);
+  padding: 8px 0 8px 32px;
+  margin: 0;
+}
+
+.eo-quote p {
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1.2;
+  font-style: italic;
+  margin: 0 0 16px;
+}
+
+.eo-quote cite {
+  font-family: var(--_typography---font-family--font-heading);
+  font-style: normal;
+  font-size: var(--_typography---bodytext--b2);
+  text-transform: uppercase;
+}
+
+.eo-cta {
+  background-color: var(--primary-color--p-100);
+  padding: 72px 48px;
+  text-align: center;
+}
+
+.eo-cta .eo-text {
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+/* ---------- Buttons ---------- */
+
+.eo-button {
+  display: inline-block;
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---heading--h6);
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 28px;
+  border: 1px solid var(--neutral-color--n-100);
+  color: var(--neutral-color--n-100);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
+}
+
+.eo-button:hover {
+  background-color: var(--neutral-color--n-100);
+  color: var(--base-color--base);
+}
+
+.eo-button.solid {
+  background-color: var(--neutral-color--n-100);
+  color: var(--primary-color--p-100);
+}
+
+.eo-button.solid:hover {
+  background-color: var(--base-color--base);
+  color: var(--neutral-color--n-100);
+  border-color: var(--base-color--base);
+}
+
+/* ---------- Contact ---------- */
+
+.eo-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.eo-info-list {
+  display: grid;
+  gap: 2px;
+}
+
+.eo-info-item {
+  border-top: 1px solid rgb(255 255 255 / 0.35);
+  padding: 20px 0;
+}
+
+.eo-info-item:last-child {
+  border-bottom: 1px solid rgb(255 255 255 / 0.35);
+}
+
+.eo-info-label {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.eo-info-value {
+  font-size: var(--_typography---bodytext--b1);
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.eo-form {
+  background-color: var(--primary-color--p-100);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.eo-field {
+  display: grid;
+  gap: 6px;
+}
+
+.eo-field.full {
+  grid-column: 1 / -1;
+}
+
+.eo-field label {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.eo-field input,
+.eo-field select,
+.eo-field textarea {
+  font-family: var(--_typography---font-family--font-bodytext);
+  font-size: var(--_typography---bodytext--b2);
+  color: var(--neutral-color--n-100);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--neutral-color--n-100);
+  border-radius: 0;
+  padding: 8px 0;
+  outline: none;
+  width: 100%;
+}
+
+.eo-field select option {
+  color: #111;
+}
+
+.eo-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.eo-field input::placeholder,
+.eo-field textarea::placeholder {
+  color: rgb(255 255 255 / 0.6);
+}
+
+.eo-field input:focus,
+.eo-field select:focus,
+.eo-field textarea:focus {
+  border-bottom-width: 2px;
+}
+
+.eo-form [role="status"] {
+  grid-column: 1 / -1;
+  font-size: var(--_typography---bodytext--b3);
+  margin: 0;
+}
+
+/* ---------- Blog ---------- */
+
+.eo-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.eo-post-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: var(--neutral-color--n-100);
+  color: var(--n-333);
+  transition: transform 0.25s;
+}
+
+.eo-page main a.eo-post-card {
+  color: var(--n-333);
+}
+
+.eo-post-card:hover {
+  transform: translateY(-6px);
+}
+
+.eo-post-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.eo-post-card-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.eo-post-card-meta {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b4);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-color--p-100);
+}
+
+.eo-post-card-title {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--base-color--base);
+  margin: 0;
+}
+
+.eo-post-card-excerpt {
+  font-size: var(--_typography---bodytext--b3);
+  line-height: 1.45;
+  margin: 0;
+  flex: 1;
+}
+
+.eo-read-more {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b2);
+  text-transform: uppercase;
+  color: var(--primary-color--p-100);
+}
+
+/* Featured (first) post spans the full width */
+.eo-post-card.featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.eo-post-card.featured img {
+  width: 58%;
+  aspect-ratio: auto;
+  min-height: 420px;
+}
+
+.eo-post-card.featured .eo-post-card-body {
+  padding: 48px;
+  justify-content: center;
+}
+
+.eo-post-card.featured .eo-post-card-title {
+  font-size: 56px;
+}
+
+/* ---------- Article text (blog posts, legal pages) ---------- */
+
+.eo-prose {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.eo-prose h2 {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 56px 0 16px;
+}
+
+.eo-prose h2:first-child {
+  margin-top: 0;
+}
+
+.eo-prose p,
+.eo-prose li {
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+.eo-prose p {
+  margin: 0 0 20px;
+}
+
+.eo-prose ul {
+  margin: 0 0 20px;
+  padding-left: 24px;
+}
+
+.eo-prose li {
+  margin-bottom: 8px;
+}
+
+.eo-prose li::marker {
+  color: var(--primary-color--p-100);
+}
+
+.eo-prose blockquote {
+  border-left: 6px solid var(--primary-color--p-100);
+  margin: 36px 0;
+  padding: 4px 0 4px 28px;
+  font-size: 30px;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.eo-prose a {
+  text-decoration-color: var(--primary-color--p-100);
+  text-underline-offset: 4px;
+}
+
+.eo-prose .eo-updated {
+  font-family: var(--_typography---font-family--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--_typography---bodytext--b3);
+  opacity: 0.75;
+}
+
+.eo-article-image {
+  margin: 0 auto 64px;
+  max-width: 1100px;
+}
+
+.eo-back-link {
+  font-family: var(--_typography---font-family--font-heading);
+  font-size: var(--_typography---bodytext--b2);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+
+.eo-back-link:hover {
+  opacity: 1;
+}
+
+/* ---------- 404 ---------- */
+
+.eo-not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Colour switcher ---------- */
+
+/* Middle of the right edge: both bottom corners hold hero buttons. */
+.eo-theme {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  font-family: "Instrument Serif", Georgia, serif;
+  color: #1a1a1a;
+}
+
+.eo-theme-toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.35);
+  background: conic-gradient(var(--primary-color--p-100) 0 50%, var(--base-color--base) 50% 100%);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.eo-theme-toggle:hover {
+  transform: scale(1.06);
+}
+
+.eo-theme-toggle svg {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.5));
+}
+
+.eo-theme-panel {
+  position: absolute;
+  right: 68px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgb(0 0 0 / 0.35);
+  padding: 18px;
+}
+
+.eo-theme-title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.eo-theme-hint {
+  font-size: 15px;
+  line-height: 1.3;
+  color: #555;
+  margin: 0 0 14px;
+}
+
+.eo-theme-list {
+  display: grid;
+  gap: 6px;
+}
+
+.eo-theme-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: #f4f4f2;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.eo-theme-option:hover {
+  background: #ebebe7;
+}
+
+.eo-theme-option[aria-pressed="true"] {
+  border-color: #1a1a1a;
+  background: #fff;
+}
+
+.eo-theme-swatch {
+  display: flex;
+  flex: none;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.1);
+}
+
+.eo-theme-swatch span {
+  width: 22px;
+  height: 30px;
+}
+
+.eo-theme-name {
+  font-size: 17px;
+  line-height: 1.1;
+}
+
+.eo-theme-hex {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: #666;
+  margin-top: 3px;
+}
+
+.eo-theme-custom {
+  border-top: 1px solid #e3e3e0;
+  margin-top: 14px;
+  padding-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.eo-theme-custom label {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+  color: #444;
+}
+
+.eo-theme-custom input[type="color"] {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 2px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.eo-theme-custom .eo-theme-hex {
+  font-size: 12px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 991px) {
+  .eo-cards,
+  .eo-blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .eo-split,
+  .eo-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .eo-split.reverse > :first-child {
+    order: 0;
+  }
+
+  .eo-post-card.featured {
+    flex-direction: column;
+  }
+
+  .eo-post-card.featured img {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .eo-post-card.featured .eo-post-card-body {
+    padding: 28px;
+  }
+
+  .eo-post-card.featured .eo-post-card-title {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .eo-section {
+    padding: 56px 20px;
+  }
+
+  .eo-section.tight {
+    padding-top: 0;
+  }
+
+  .eo-hero {
+    padding: 32px 20px 56px;
+  }
+
+  .eo-cards,
+  .eo-blog-grid,
+  .eo-form {
+    grid-template-columns: 1fr;
+  }
+
+  .eo-form {
+    padding: 28px 20px;
+  }
+
+  .eo-image {
+    min-height: 300px;
+  }
+
+  .eo-cta {
+    padding: 48px 20px;
+  }
+
+  .eo-prose h2 {
+    font-size: 36px;
+  }
+
+  .eo-prose p,
+  .eo-prose li {
+    font-size: 19px;
+  }
+
+  .eo-prose blockquote {
+    font-size: 24px;
+  }
+
+  .eo-theme {
+    right: 10px;
+  }
+
+  .eo-theme-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .eo-theme-panel {
+    right: 0;
+    width: min(300px, calc(100vw - 20px));
+    top: auto;
+    bottom: 56px;
+    transform: none;
+    max-height: calc(50vh - 20px);
+  }
+}

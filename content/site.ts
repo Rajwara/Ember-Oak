@@ -6,32 +6,34 @@ import { responsiveImage } from "@/lib/images";
  */
 
 export const site = {
-  name: "The Rib & Bone",
-  monogram: ["R", "&", "B"],
+  name: "Ember Oak",
+  monogram: ["E", "&", "O"],
   description: "Western modern smokehouse and comfort kitchen.",
-  email: "hello@8AM.DESIGN",
+  email: "hello@emberoak.ae",
   phone: "+1234567890",
   address: "Jl. Panglima Polim No. 21, Jakarta Selatan",
   hours: ["Mon–Fri: 11:00 AM – 10:00 PM", "Sat–Sun: 9:00 AM – 11:00 PM"],
   newsletterPrompt: "Subscribe to our monthly grillletter (specials + recipes!)",
-  bookingUrl: "#",
-  menuUrl: "#",
+  bookingUrl: "/contact",
+  menuUrl: "/#Dish",
   credit: { label: "8AM", url: "https://8am.design/" },
   copyrightYear: 2025,
 };
 
+// Links use full page loads (plain <a>), not client-side routing: Webflow's
+// animation runtime only sets itself up on a fresh page load.
 export const navLinks = [
-  { label: "About", href: "#About" },
-  { label: "DISHES", href: "#Dish" },
-  { label: "GALLERY", href: "#Gallery" },
-  { label: "RESERVATION", href: "#Order" },
+  { label: "ABOUT", href: "/about" },
+  { label: "DISHES", href: "/#Dish" },
+  { label: "BLOG", href: "/blog" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export const footerLinks = [
-  { label: "HOME", href: "#Home" },
-  { label: "ABOUT", href: "#About" },
-  { label: "DISHES", href: "#Dish" },
-  { label: "CONTACT", href: "#Order" },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT", href: "/about" },
+  { label: "BLOG", href: "/blog" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 export const socialLinks = [
@@ -40,27 +42,10 @@ export const socialLinks = [
   { label: "TIKTOK", href: "https://www.tiktok.com" },
 ];
 
+// wId: Webflow interaction ids that give these links their hover underline.
 export const legalLinks = [
-  {
-    label: "License",
-    href: "https://smokehouse-restaurant.webflow.io/license",
-    wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07cf",
-  },
-  {
-    label: "Style Guide",
-    href: "https://smokehouse-restaurant.webflow.io/style-guide",
-    wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07d1",
-  },
-  {
-    label: "404",
-    href: "https://smokehouse-restaurant.webflow.io/404",
-    wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07d3",
-  },
-  {
-    label: "Changelog",
-    href: "https://smokehouse-restaurant.webflow.io/changelog",
-    wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07d5",
-  },
+  { label: "Terms & Conditions", href: "/terms", wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07cf" },
+  { label: "Privacy Policy", href: "/privacy", wId: "a0816ac4-9de2-1d0a-fb40-38aa833c07d1" },
 ];
 
 export const hero = {
@@ -69,7 +54,7 @@ export const hero = {
 };
 
 export const about = {
-  heading: "THE RIB & BONE IS A TRIBUTE TO THE TIMELIESS TRADITION OF WESTERN HOSPITALITY",
+  heading: "EMBER OAK IS A TRIBUTE TO THE TIMELESS TRADITION OF WESTERN HOSPITALITY",
 };
 
 const dishSizes = "(max-width: 767px) 100vw, (max-width: 991px) 727.9921875px, 915px";
@@ -103,19 +88,19 @@ export const menuItems = [
   {
     name: "Tomahawk Ribeye",
     slug: "tomahawk-ribeye",
-    href: "https://smokehouse-restaurant.webflow.io/menu/tomahawk-ribeye",
+    href: "/#Order",
     images: [porkBelly, steaks, ribs],
   },
   {
     name: "Baby Back Ribs",
     slug: "baby-back-ribs",
-    href: "https://smokehouse-restaurant.webflow.io/menu/baby-back-ribs",
+    href: "/#Order",
     images: [ribs, steaks, porkBelly],
   },
   {
     name: "Truffle Mac & Cheese",
     slug: "truffle-mac-cheese",
-    href: "https://smokehouse-restaurant.webflow.io/menu/truffle-mac-cheese",
+    href: "/#Order",
     images: [
       menuImage("menu-cheese-sauce"),
       menuImage("menu-mac-and-cheese-closeup"),
@@ -142,7 +127,7 @@ export const testimonials = {
       rating: 5,
       paragraphs: [
         "An unforgettable dining experience from start to finish. The moment we walked in, we were greeted like old friends, which set the tone for the night. The cocktails were balanced and creative, the kind that makes you want to try more than one.",
-        "When the food arrived, it exceeded expectations. Every dish was plated beautifully and tasted even better than it looked. The dessert was the perfect sweet ending to a perfect evening. I’ve already recommended Oak & Ember to half my friends.",
+        "When the food arrived, it exceeded expectations. Every dish was plated beautifully and tasted even better than it looked. The dessert was the perfect sweet ending to a perfect evening. I’ve already recommended Ember Oak to half my friends.",
       ],
     },
     {
@@ -157,7 +142,7 @@ export const testimonials = {
       name: "RENDY T.",
       rating: 5,
       paragraphs: [
-        "Hands down the best steak I’ve had in Jakarta. The cut was perfectly cooked, juicy, and full of flavor. It felt like every bite was crafted with precision, from the perfect sear to the way it was seasoned. You can really taste the difference when a restaurant takes quality this seriously.",
+        "Hands down the best steak I’ve had in the city. The cut was perfectly cooked, juicy, and full of flavor. It felt like every bite was crafted with precision, from the perfect sear to the way it was seasoned. You can really taste the difference when a restaurant takes quality this seriously.",
         "Even the sides were incredible — buttery mashed potatoes and crisp veggies that complemented the steak beautifully. I left completely satisfied and already planning my next visit. This is officially my go-to spot when I’m craving a great steak night.",
       ],
     },

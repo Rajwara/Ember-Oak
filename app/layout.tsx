@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { themeBootScript } from "@/lib/themes";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
+import "./pages.css";
 
 export const metadata: Metadata = {
-  title: site.name,
+  title: { default: `${site.name} | Western Smokehouse`, template: `%s | ${site.name}` },
   description: site.description,
   openGraph: { images: ["/assets/images/social-share-preview.png"] },
   twitter: { card: "summary_large_image" },
@@ -25,6 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="/assets/css/smokehouse-restaurant.webflow.shared.ee2cd7ae9.css"
         />
         <link rel="stylesheet" href="/assets/css/fonts.css" />
+        {/* Applies a palette saved by the colour switcher before the page paints. */}
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -34,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="body">
         {children}
+        <ThemeSwitcher />
         {/*
           jQuery + Webflow runtime (navbar, scroll animations, forms), bundled in load order.
           It must run before the browser's load event, like in the original Webflow page:
