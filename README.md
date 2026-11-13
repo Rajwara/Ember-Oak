@@ -20,6 +20,6 @@ Open http://localhost:3000.
 
 ## Notes
 
-- Images go in `public/assets/images/` with their original file names.
+- Images live in `public/assets/images/`, named by what they show. Prefixes match the section that uses them (`icon-`, `dish-`, `menu-`, `gallery-`). A `-500`, `-800` or `-1080` suffix marks a smaller copy the browser picks on narrower screens.
 - Scroll animations and the mobile menu come from Webflow's runtime, which uses the `data-w-id` attributes in the components. Keep those attributes if you edit the markup.
 - The newsletter forms are not connected to anything yet; submitting shows "This form is not connected yet."

@@ -4,11 +4,11 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "The Rib & Bone",
   description: "Smokehouse restaurant",
-  openGraph: { images: ["/assets/images/68de03bf9be8d331c2a2cebb_Snippet.png"] },
+  openGraph: { images: ["/assets/images/social-share-preview.png"] },
   twitter: { card: "summary_large_image" },
   icons: {
-    icon: "/assets/images/68de2a67df32975f58f034bd_FAICON_EIGHT_32.webp",
-    apple: "/assets/images/68de2a6b26c9ba51a8fefba7_FAICON_EIGHT_256.webp",
+    icon: "/assets/images/favicon-32.webp",
+    apple: "/assets/images/apple-touch-icon-256.webp",
   },
 };
 

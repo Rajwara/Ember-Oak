@@ -3,11 +3,11 @@
 import { useEffect, useRef } from "react";
 
 const POSTER =
-  "/assets/images/68d9fcde5afaa87b7efc42a5_cooking-in-restaurant-fine-cuisine-chef-turning-2025-08-28-17-48-27-utc-poster-00001.jpg";
+  "/assets/images/chef-cooking-video-poster.jpg";
 const MP4 =
-  "/assets/media/68d9fcde5afaa87b7efc42a5_cooking-in-restaurant-fine-cuisine-chef-turning-2025-08-28-17-48-27-utc-transcode.mp4";
+  "/assets/media/chef-cooking-video.mp4";
 const WEBM =
-  "/assets/media/68d9fcde5afaa87b7efc42a5_cooking-in-restaurant-fine-cuisine-chef-turning-2025-08-28-17-48-27-utc-transcode.webm";
+  "/assets/media/chef-cooking-video.webm";
 
 // React does not write the `muted` attribute into server HTML, and browsers only
 // autoplay muted video, so set it on the element and start playback here.
