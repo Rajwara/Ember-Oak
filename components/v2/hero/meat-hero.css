@@ -9,7 +9,8 @@
   --mm-red: var(--primary-color--p-100, #e3262c);
   --mm-red-hover: color-mix(in srgb, var(--mm-red) 85%, white);
   --mm-ink: #111;
-  --mm-white: #fff;
+  /* text colour follows the page (warm cream on /v2) */
+  --mm-white: var(--neutral-color--n-100, #fff);
   --mm-gold: #f8b927;
   --mm-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --mm-ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -158,7 +159,7 @@
   box-shadow: 0 8px 20px rgb(0 0 0 / 0.3);
 }
 .mm-logo__amp {
-  color: var(--mm-red);
+  color: var(--mm-gold);
   font-size: 15px;
 }
 
@@ -178,7 +179,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--mm-white);
   display: grid;
   grid-template-columns: repeat(2, 6px);
   gap: 4px;
@@ -229,7 +230,7 @@
   right: 13px;
   bottom: 3px;
   height: 2px;
-  background: #fff;
+  background: var(--mm-white);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: right;
@@ -237,7 +238,7 @@
 }
 .mm-menu__links a:hover,
 .mm-menu__links a.is-active {
-  color: #fff;
+  color: var(--mm-white);
 }
 .mm-menu__links a:hover::after,
 .mm-menu__links a.is-active::after {
@@ -272,7 +273,7 @@
   left: 0;
   min-width: 220px;
   padding: 10px;
-  background: #fff;
+  background: var(--mm-white);
   color: var(--mm-ink);
   border-radius: 18px;
   box-shadow: 0 20px 50px rgb(0 0 0 / 0.3);
@@ -552,7 +553,7 @@
 .mm-badge__icon {
   width: 26px;
   height: 26px;
-  color: #fff;
+  color: var(--mm-white);
   display: grid;
   place-items: center;
 }
@@ -622,7 +623,7 @@
   height: 46px;
   flex: none;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid var(--mm-white);
   margin-left: -12px;
   display: grid;
   place-items: center;
@@ -703,7 +704,7 @@
   gap: 10px;
   padding: 17px 30px;
   border-radius: 999px;
-  background: #fff;
+  background: var(--mm-white);
   color: var(--mm-ink) !important;
   font-weight: 600;
   font-size: 15px;

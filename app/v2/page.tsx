@@ -18,14 +18,15 @@ export const metadata: Metadata = {
 };
 
 /**
- * v2 palette, matching the butcher-red banner: near-black background with a
- * bright red accent. Applies to this page only; the colour switcher can still
- * override it for previewing.
+ * v2 palette, "Oxblood & Charcoal": a classic steakhouse look. Warm charcoal
+ * background, deep oxblood accent and warm cream text instead of pure white.
+ * Applies to this page only; the colour switcher can still override it.
  */
 const V2_PALETTE = `:root {
-  --base-color--base: #161111;
-  --primary-color--p-100: #e3262c;
-  --primary-color--p-200: #9b1419;
+  --base-color--base: #1a1412;
+  --primary-color--p-100: #7d1d17;
+  --primary-color--p-200: #521310;
+  --neutral-color--n-100: #f3e9da;
 }`;
 
 export default function HomeV2() {

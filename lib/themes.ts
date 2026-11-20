@@ -8,6 +8,10 @@ export type Palette = { id: string; name: string; base: string; accent: string }
 
 export const palettes: Palette[] = [
   { id: "original", name: "Original", base: "#114b3a", accent: "#d03b4d" },
+  { id: "oxblood-charcoal", name: "Oxblood & Charcoal", base: "#1a1412", accent: "#7d1d17" },
+  { id: "dry-aged-wine", name: "Dry-Aged Wine", base: "#16110f", accent: "#6e1a24" },
+  { id: "ember-copper", name: "Ember Copper", base: "#1c1613", accent: "#a2461f" },
+  { id: "butcher-red", name: "Butcher Red", base: "#161111", accent: "#e3262c" },
   { id: "charcoal-ember", name: "Charcoal & Ember", base: "#1f1b18", accent: "#c4501f" },
   { id: "smoked-oak", name: "Smoked Oak", base: "#33241b", accent: "#a86f2c" },
   { id: "midnight-copper", name: "Midnight & Copper", base: "#15223a", accent: "#b85a2e" },
