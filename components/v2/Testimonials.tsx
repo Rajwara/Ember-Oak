@@ -3,7 +3,11 @@ import StarRating from "@/components/ui/StarRating";
 
 export default function Testimonials() {
   return (
-    <div data-w-id="b21cb333-7f38-ed9c-39ad-310cd34041b2" className="testimonial-scroll-block">
+    <div
+      id="Reviews"
+      data-w-id="b21cb333-7f38-ed9c-39ad-310cd34041b2"
+      className="testimonial-scroll-block"
+    >
       <section className="testimonial-section">
         <div className="w-layout-blockcontainer testimonial-container w-container">
           <div className="testimonial-block">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Header from "@/components/v2/Header";
-import Hero from "@/components/v2/Hero";
+import MeatHero from "@/components/v2/hero/MeatHero";
 import About from "@/components/v2/About";
 import SignatureDishes from "@/components/v2/SignatureDishes";
 import Menu from "@/components/v2/Menu";
@@ -18,13 +17,22 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/**
+ * v2 palette, matching the butcher-red banner: near-black background with a
+ * bright red accent. Applies to this page only; the colour switcher can still
+ * override it for previewing.
+ */
+const V2_PALETTE = `:root {
+  --base-color--base: #161111;
+  --primary-color--p-100: #e3262c;
+  --primary-color--p-200: #9b1419;
+}`;
+
 export default function HomeV2() {
   return (
     <>
-      <div id="Home" className="navbar-hero">
-        <Header />
-        <Hero />
-      </div>
+      <style>{V2_PALETTE}</style>
+      <MeatHero />
       <About />
       <SignatureDishes />
       <Menu />

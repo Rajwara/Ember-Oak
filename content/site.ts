@@ -174,3 +174,31 @@ export const location = {
   heading: "JOIN US FIRESIDE",
   images: [galleryImages.steaks, galleryImages.ribs, galleryImages.beef],
 };
+
+/**
+ * Banner at the top of /v2 (components/v2/hero). The rating and guest count
+ * are placeholders: replace them with your real numbers before launch.
+ */
+export const heroV2 = {
+  eyebrow: "EMBER OAK",
+  title: "SMOKEHOUSE",
+  links: [
+    { label: "Home", href: "/v2" },
+    { label: "About", href: "/about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ],
+  // Extra links shown in the round menu button's dropdown.
+  moreLinks: [
+    { label: "Our Dishes", href: "#Dish" },
+    { label: "Gallery", href: "#Gallery" },
+    { label: "Reviews", href: "#Reviews" },
+    { label: "Book a Table", href: "/contact" },
+  ],
+  cta: { label: "Book a Table", href: "/contact" },
+  badges: ["Oak-Smoked Daily", "Premium Cuts"],
+  rating: { value: 4.9, label: "Guest Rating" },
+  guests: { value: 5, suffix: "K+", label: "Happy Guests" },
+  contactLabel: "Get in Touch:",
+  menuButton: { label: "View Our Menu", href: "#Dish" },
+};

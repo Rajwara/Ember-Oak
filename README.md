@@ -19,6 +19,7 @@ Open http://localhost:3000. `npm run build` makes a production build; Vercel dep
 | `app/layout.tsx` | Page shell: page title, stylesheets, favicon, Webflow animation script |
 | `app/page.tsx` | The homepage: lists the sections in order |
 | `app/about`, `app/contact`, `app/blog`, `app/terms`, `app/privacy` | Inner pages (`/about`, `/contact`, `/blog`, `/terms`, `/privacy`) |
+| `app/v2/page.tsx`, `components/v2/` | `/v2`: draft redesign of the homepage with its own copies of the sections, the animated meat banner (`components/v2/hero/`) and a red/near-black palette. Banner text is in `heroV2` in `content/site.ts`. |
 | `app/blog/[slug]/page.tsx` | Single blog post page, one per post in `content/blog.ts` |
 | `app/pages.css` | Styles for the inner pages and the colour switcher |
 | `content/blog.ts` | **Blog posts.** Copy an entry to add a post. |
